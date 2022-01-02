@@ -1,0 +1,42 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,300&family=IBM+Plex+Sans:wght@100);
+@import url(https://fonts.googleapis.com/css2?family=Rock+3D);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #111;
+
+$mainFont: 'IBM Plex Mono', monospace;
+// $linkColor: rgb(169, 173, 193);
+// $linkColor: rgb(255, 69, 69);
+$linkColor: rgb(62, 106, 225);
+// $linkColor: rgb(255, 214, 68);
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+// $headingFont: 'Rock 3D Regular', cursive;
+$headingTextShadow: none;
+// $headingLetterSpacing: -0.03em;
+$headingTextTransform: uppercase;
+$selectionBackgroundColor: rgb(4, 5, 9);
+// $selectionBackgroundColor: #e7ad52;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
